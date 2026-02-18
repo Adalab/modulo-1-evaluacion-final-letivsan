@@ -1,5 +1,7 @@
-* {
-  margin: 0;
-}
-
-/* Aquí van tus estilos */
+@use 'core/reset';
+@use 'components/code';
+@use 'components/links';
+@use 'layout/page';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'pages/index';
