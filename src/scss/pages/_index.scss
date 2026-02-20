@@ -1,4 +1,34 @@
-.main__list {
-  padding-left: 2rem;
-  padding-bottom: 20px;
+.store {
+  &__title {
+    padding: 3rem 1.5rem;
+    text-align: left;
+  }
+
+  &__pretitle {
+    font-size: 0.8rem;
+    color: var(--color-g);
+    margin-bottom: 0.5rem;
+  }
+
+  &__content {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-d);
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--color-g);
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--color-g);
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--color-w);
+
+    &__btn:hover {
+      transform: scale(1.1);
+    }
+  }
 }

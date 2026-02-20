@@ -1,10 +1,42 @@
-@use '../core/variables' as vars;
+.footer {
+    background: var(--color-grey);
+    color: var(--color-w);
+    padding: 3rem 1.5 rem;
+    text-align: center;
+    position: relative;
 
-.page__footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    padding: 1rem;
-    color: vars.$color-secondary;
+    &__columns {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 2rem;
+
+        &_nav {
+            display: block;
+            color: var(--color-w);
+            text-decoration: none;
+            margin: 0.3rem 0;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        right: 1.5rem;
+        top: -20px;
+        background-color: var(--color-w);
+        color: var(--color-g);
+        padding: 0.8rem;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 2rem;
+        animation: bounce 1.5s infinite;
+    }
+
+    @media (min-width: 768px) {
+        &__columns {
+            flex-direction: row;
+            justify-content: center;
+            gap: 4rem;
+        }
+    }
 }
