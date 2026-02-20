@@ -1,34 +1,78 @@
 .store {
-  &__title {
-    padding: 3rem 1.5rem;
+  padding: 2rem 1rem;
+
+  &__pretitle {
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+    color: var(--color-g);
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
     text-align: left;
   }
 
-  &__pretitle {
-    font-size: 0.8rem;
-    color: var(--color-g);
+  &__title {
+    text-align: left;
     margin-bottom: 0.5rem;
+    color: var(--color-d);
+    font-family: var(--font-title);
+    font-size: 1.4rem;
   }
 
   &__content {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: var(--color-d);
+    font-size: 1.2rem;
+    font-family: var(--font-text);
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: var(--color-grey);
+    line-height: 1.5;
   }
 
   &__btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    border: 2px solid var(--color-g);
-    border-radius: 25px;
-    text-decoration: none;
-    color: var(--color-g);
     margin-top: 1rem;
-    transition: all 0.3s ease;
+    border: 2px solid var(--color-g);
+    border-radius: 1.6rem;
+    color: var(--color-g);
     background-color: var(--color-w);
+    font-size: 1.2rem;
+    font-family: var(--font-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
 
-    &__btn:hover {
-      transform: scale(1.1);
+    &:hover {
+      transform: scale(1.1) translateY(-4px);
     }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .store {
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    &__pretitle {
+      font-size: 1rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__content {
+      font-size: 1.2rem;
+    }
+
+    &__btn {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .store {
+    padding-left: 22rem;
+    padding-right: 22rem;
   }
 }
