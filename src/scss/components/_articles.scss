@@ -1,14 +1,19 @@
 .back {
-  &__title {
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
+  padding: 2rem 1.5rem;
+  text-align: center;
 
   &__pretitle {
-    text-align: center;
+    font-family: var(--font-text);
     color: var(--color-grey);
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -16,35 +21,44 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin: 2rem 0;
 
   &__store {
-    font: var(--font-title);
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
   }
 
   &__img {
-    width: 150px;
+    width: 100%;
+    max-width: 11rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: 50%;
-    filter: drop-shadow(0.5rem --color-grey);
     display: block;
-    padding: 1rem;
-    margin-top: 1rem;
+    filter: drop-shadow(0 4px 6px grey)
+  }
+
+  &__products {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    color: var(--color-d);
   }
 
   &__btn {
+    font-family: var(--font-text);
+    font-size: 1.3rem;
     display: inline-block;
-    padding: 0.8rem 2rem;
+    justify-self: center;
+    padding: 1rem 2rem;
     border: 2px solid var(--color-g);
-    border-radius: 25px;
+    border-radius: 1.5rem;
     text-decoration: none;
     color: var(--color-w);
+    background-color: var(--color-g);
     margin-top: 1rem;
     transition: all 0.3s ease;
-    background-color: var(--color-g);
   }
 
   &__btn:hover {
@@ -56,5 +70,16 @@
 @media (min-width: 768px) {
   .articles {
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .back {
+    padding: 4rem 2rem;
+  }
+
+  .back__title {
+    font-size: 1.8rem;
   }
 }
